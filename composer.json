@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/fontawesome",
+    "type": "magento-module",
+    "license": "OSL-3.0",
+    "homepage": "",
+    "description": "fontawesome",
+    "authors": [
+    {
+        "name": "ab",
+        "email": "sahi.abubakar@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

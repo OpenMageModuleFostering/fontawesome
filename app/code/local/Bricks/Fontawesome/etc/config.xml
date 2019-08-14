@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Bricks_Fontawesome>
+            <version>0.1.0</version>
+         </Bricks_Fontawesome>
+    </modules>
+    
+    <admin>
+        <routers>
+			<fontawesome>
+				<use>admin</use>
+				<args>
+					<module>Bricks_Fontawesome</module>
+					<frontName>fontawesome</frontName>
+				</args>
+			</fontawesome>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <menu>
+            <fontawe module="fontawesome">
+              <title>Social Icons</title>
+              <sort_order>72</sort_order>
+                <children>
+                    <font_menu module="fontawesome">
+                        <title>List of social icons</title>
+                        <sort_order>1</sort_order>
+                        <action>fontawesome/adminhtml_fontawesome</action>
+                    </font_menu>
+                    <font_settings module="fontawesome">
+                        <title>Settings</title>
+                        <sort_order>2</sort_order>
+                        <action>fontawesome/adminhtml_fontsettings/new/</action>
+                    </font_settings>
+                </children>
+            </fontawe>
+        </menu>
+
+		<layout>
+			<updates>
+				<fontawesome>
+					<file>fontawesome.xml</file>
+				</fontawesome>
+			</updates>
+		</layout>
+    </adminhtml>   
+    <global>
+        <models>
+            <fontawesome>
+                <class>Bricks_Fontawesome_Model</class>
+                <resourceModel>fontawesome_mysql4</resourceModel>
+            </fontawesome>
+            <fontawesome_mysql4>
+                <class>Bricks_Fontawesome_Model_Mysql4</class>
+                <entities>
+                    <fontawesome>
+                        <table>fontawesome</table>
+                    </fontawesome>
+                    <fontsettings>
+                        <table>fontsettings</table>
+                    </fontsettings>
+                    <font_css_setting>
+                        <table>font_css_setting</table>
+                    </font_css_setting>
+                </entities>
+            </fontawesome_mysql4>
+        </models>
+
+        <blocks>
+            <fontawesome>
+                <class>Bricks_Fontawesome_Block</class>
+            </fontawesome>
+        </blocks>
+
+        <helpers>
+            <fontawesome>
+                <class>Bricks_Fontawesome_Helper</class>
+            </fontawesome>
+        </helpers>
+
+        <resources>
+            <fontawesome_setup>
+                <setup>
+                    <module>Bricks_Fontawesome</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </fontawesome_setup>
+            <fontawesome_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </fontawesome_write>
+            <fontawesome_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </fontawesome_read>
+        </resources>
+    </global>
+    <frontend>
+        <routers>
+            <customer>
+                <args>
+                    <modules>
+                        <bricks_fontawesome before="Mage_Customer">Bricks_Fontawesome</bricks_fontawesome>
+                    </modules>
+                </args>
+            </customer>
+        </routers>
+    </frontend>
+    <frontend>
+        <routers>
+          <fontawesome>
+            <use>standard</use>
+              <args>
+                <module>Bricks_Fontawesome</module>
+                <frontName>fonts</frontName>
+              </args>
+          </fontawesome>
+        </routers>
+        <layout>
+          <updates>
+          <fontawesome>
+            <file>fontawesome.xml</file>
+          </fontawesome>
+          </updates>
+        </layout>
+  </frontend>
+</config>

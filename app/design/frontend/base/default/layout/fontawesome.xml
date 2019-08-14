@@ -1,0 +1,12 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0"> 
+	<default>
+          <reference name="content"></reference>
+	</default>
+  	<fontawesome_test_index>
+       	<reference name="content">
+            <block type="fontawesome/icons" name="index_icons" template="fontawesome/index.phtml" />
+       	</reference>
+  	</fontawesome_test_index>
+</layout>   
+	

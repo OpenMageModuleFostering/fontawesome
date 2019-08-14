@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+  <acl>
+    <resources>
+      <all>
+        <title>Allow Everything</title>
+      </all>
+      <admin>
+        <children>
+          <fontawesome translate="title" module="fontawesome">
+                    <title>Social Icon</title>
+                    <children>
+                        <firstchild>
+                            <title>Social Icon</title>
+                        </firstchild>
+                    </children>
+          </fontawesome>
+        </children>
+      </admin>
+    </resources>
+  </acl>
+</config>

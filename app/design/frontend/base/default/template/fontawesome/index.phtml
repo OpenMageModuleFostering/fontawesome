@@ -1,0 +1,39 @@
+<?php 
+$css_settings = Mage::getModel('fontawesome/fontsettings')->getFontFileSetting();
+if(!empty($css_settings))
+{
+	if($css_settings['font_css_file_status'] && $css_settings['extension_status'])
+	{
+?>
+<link  rel="stylesheet" type="text/css"  media="all" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+<?php 
+	}
+}
+?>
+<?php
+if(!empty($css_settings))
+{
+	if($css_settings['extension_status'])
+	{
+?>
+		<ul class="icons">
+<?php
+		$data = Mage::getModel('fontawesome/fontsettings')->getAllSelected();
+		foreach ($data as $key => $value) 
+		{
+			if(trim($value['font_url']))
+			{
+
+?>
+			<li>
+				<a target="_blank" href="<?php echo $value['font_url']; ?>"><span class="<?php echo $value['font_class']; ?>"></span></a>
+			</li>
+<?php 
+			}
+		}
+?>
+<ul>
+<?php 
+	}
+}
+?>

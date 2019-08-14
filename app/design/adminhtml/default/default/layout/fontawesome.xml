@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <fontawesome_adminhtml_fontawesome_index>
+        <reference name="content">
+            <block type="fontawesome/adminhtml_fontawesome" name="fontawesome" />
+        </reference>
+    </fontawesome_adminhtml_fontawesome_index>
+
+    <adminhtml_fontawesome_edit>
+        <reference name="content">
+            <block type="fontawesome/adminhtml_fontawesome_edit" name="edit" />
+        </reference>
+    </adminhtml_fontawesome_edit>
+
+    <fontawesome_adminhtml_fontsettings_index>
+        <reference name="content">
+            <block type="fontawesome/adminhtml_fontsettings" name="fontawesome" />
+        </reference>
+    </fontawesome_adminhtml_fontsettings_index>
+</layout>
